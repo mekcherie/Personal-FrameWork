@@ -13,15 +13,13 @@
     --font-family: "Futura", "Segoe UI","Open Sans", "Helvetica Neue", sans-serif;
 }
 body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
     font-family: var(--font-family);
     letter-spacing: 0.5px;
     color: var(--border-style);
     background-image: linear-gradient(to right, #a09696, pink);
     font-size: 15px;
 }
-
 section#me-intro  {
 	text-transform: uppercase;
     color: var(--color-md-dark);
@@ -61,7 +59,7 @@ blockquote {
     margin-right: 1.25em;
     vertical-align: -1.4em;
   }
-h2, h3, h4 {
+ .h3, h4 {
 	font-weight: normal;
 	margin-top: 30px;
 	margin-bottom: 15px;
@@ -81,6 +79,7 @@ aside.sidebar {
 	top: 50px;
   text-align: right;
   margin-left: 10%;
+  color: brown;
 }
 
 .card {
@@ -89,9 +88,12 @@ aside.sidebar {
     width: 300px;
     height: 300px; 
     position: relative;
+    left: 400px;
     border-radius: 1px; 
     display: flex;
     align-content: center;
+    padding: 10px;
+    margin-top: 20px;
   }
 .card:hover {
     box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
@@ -101,6 +103,7 @@ aside.sidebar {
   }
 .button {
     background-color: var(--color-md-dark);
+    color: papayawhip;
     border: none;
     padding: 16px 32px;
     text-decoration: none;
@@ -112,22 +115,51 @@ h1 {
     margin: 10px;
     padding: 35px;
 }
-h3 {
-    color: var(--color-lightest);
+.cards {
+  display: grid;
+  grid-template-areas:
+  "q w r"
+  "t y u";
+  align-content: center;
+  justify-content: center;
+  grid-gap: 40px;
 }
-h4{
-    color: var(--color-lightest);
+.cardA { 
+    background-color:  var(--color-warning);
+    grid-area: "q";
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid pink;
+    margin-bottom: 0;
 }
-.anchors {
-    color: cadetblue;
+.cardB { 
+  background-color: var(--color-warning);
+  grid-area: "w";
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid pink;
+  margin-bottom: 0;
 }
-.cardc { 
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    height: 0em;
-    position: relative;
-    top: 10%;   
-    padding: 10px;
-    line-height: 26.5px;
-    padding: 20px 15px;
+.cardC { 
+  background-color: var(--color-warning);
+  grid-area: "r";
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid pink;
+}
+.footer {
+  margin: 10px;
+  width: 400%;
+  height: 130px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.ab {
+  color:white;
+  position: relative;
+  left: 400px;
+  top: 10px;
+  display: grid;
+  grid-template-rows: 20px 20px 30px;
 }
